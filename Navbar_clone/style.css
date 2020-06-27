@@ -1,0 +1,92 @@
+:root {
+  --text_color: white;
+}
+
+body {
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: teal;
+  padding: 8px 12px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text_color);
+}
+
+.navlogo {
+  font-size: 24px;
+  color: var(--text_color);
+}
+.navlogo i {
+  color: peru;
+}
+
+.navcontent {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+.navcontent li {
+  padding: 8px 12px;
+}
+.navcontent li:hover {
+  background-color: pink;
+  border-radius: 4px;
+}
+
+.navicons {
+  list-style: none;
+  display: flex;
+  color: peru;
+  padding: 0;
+}
+.navicons li {
+  padding: 8px 12px;
+}
+
+.navbtn {
+  display: none;
+  position: absolute;
+  color: peru;
+  font-size: 24px;
+  right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navcontent {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navcontent li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navicons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbtn {
+    display: block;
+  }
+
+  .navcontent.active,
+  .navicons.active {
+    display: flex;
+  }
+}
