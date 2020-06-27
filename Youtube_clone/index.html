@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/dcf5976e5d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <!-- Header-->
@@ -32,103 +33,106 @@
       <video controls src="video/Opening.mp4"></video>
     </section>
 
-    <!--Video information-->
-    <section class="info">
-      <!--Metadata-->
-      <div class="metadata">
-        <ul class="hashtags">
-          <li>#DreamCoding</li>
-          <li>#DreamCoders</li>
-          <li>#Yu's</li>
-        </ul>
-        <div class="titleAndButton">
-          <span class="title">
-            클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) |
-            프론트엔드 개발자 입문편: HTML, CSS, Javascript 입문할 수 있는 아주
-            좋은 것
-          </span>
-          <button class="moreBtn">
-            <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-        <div class="views">
+    <div class="infoAndUpNext">
+      <!--Video information-->
+      <section class="info">
+        <!--Metadata-->
+        <div class="metadata">
+          <ul class="hashtags">
+            <li>#DreamCoding</li>
+            <li>#DreamCoders</li>
+            <li>#Yu's</li>
+          </ul>
+          <div class="titleAndButton">
+            <span class="title clamp">
+              클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
+              | 프론트엔드 개발자 입문편: HTML, CSS, Javascript 입문할 수 있는
+              아주 좋은 것. 약 팔고 있는 것이 아니라 정말로 진짜로 증말로 정말
+              거짓말 안 치고 진짜 좋은 것. 한 번쯤 시도해봐야 하는 것.
+            </span>
+            <button class="moreBtn">
+              <i class="fas fa-caret-down"></i>
+            </button>
+          </div>
           <span class="views">1M views 1 month ago</span>
         </div>
-      </div>
-      <!--Actions-->
-      <ul class="actions">
-        <li>
-          <button>
-            <i class="fas fa-thumbs-up"><span>1K</span></i>
-          </button>
-        </li>
-        <li>
-          <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
-        </li>
-        <li>
-          <button><i class="fas fa-share"></i><span>Share</span></button>
-        </li>
-        <li>
-          <button><i class="fas fa-plus"></i><span>Save</span></button>
-        </li>
-        <li>
-          <button><i class="fab fa-font-awesome-flag"></i></button>
-        </li>
-      </ul>
-      <!--Channel Description-->
-      <div class="channel">
-        <div class="metadata">
-          <img src="image/유성근.png" alt="" />
-          <div class="info">
-            <span class="name"></span>
-            <span class="subscribers"></span>
+        <!--Actions-->
+        <ul class="actions">
+          <li>
+            <button>
+              <i class="active fas fa-thumbs-up"></i><span>1K</span>
+            </button>
+          </li>
+          <li>
+            <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-share"></i><span>Share</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-plus"></i><span>Save</span></button>
+          </li>
+          <li>
+            <button>
+              <i class="fab fa-font-awesome-flag"></i><span>Report</span>
+            </button>
+          </li>
+        </ul>
+        <!--Channel Description-->
+        <div class="channel">
+          <div class="metadata">
+            <img src="image/유성근.png" alt="" />
+            <div class="info">
+              <span class="name">Yu Seonggeun</span>
+              <span class="subscribers">370K subscribers</span>
+            </div>
           </div>
           <button class="subscribe">subscribe</button>
         </div>
-        <div class="subscribe"></div>
-      </div>
-    </section>
-    <!--Up Next-->
-    <section class="upNext">
-      <span class="title">Up next</span>
-      <ul>
-        <li class="item">
-          <img src="image/1.jpg" alt="" />
-          <div class="info">
-            <span class="title"
-              >고양이 사진 첫 번째 사진. 정말 귀엽게 생긴 고 양이 이기 때문에
-              정말 인기가 많을 것이라고 생각하는 바이다. 정 말이다.
-            </span>
-            <span class="name">드림코딩 by Yu</span>
-            <span class="views">900K views</span>
-          </div>
-          <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-        </li>
-        <li class="item">
-          <img src="image/2.jpg" alt="" />
-          <div class="info">
-            <span class="title"
-              >고양이 사진 두 번째 사진. 정말 귀엽게 생긴 고 양이 이기 때문에
-              정말 인기가 많을 것이라고 생각하는 바이다. 정 말이다.
-            </span>
-            <span class="name">드림코딩 by Yu</span>
-            <span class="views">900K views</span>
-          </div>
-          <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-        </li>
-        <li class="item">
-          <img src="image/3.png" alt="" />
-          <div class="info">
-            <span class="title"
-              >정말로 다가 사진. 정말 귀엽게 생긴 고 양이 이기 때문에 정말
-              인기가 많을 것이라고 생각하는 바이다. 정 말이다.
-            </span>
-            <span class="name">드림코딩 by Yu</span>
-            <span class="views">900K views</span>
-          </div>
-          <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-        </li>
-      </ul>
-    </section>
+      </section>
+      <!--Up Next-->
+      <section class="upNext">
+        <span class="title">Up next</span>
+        <ul>
+          <li class="item">
+            <div class="img"><img src="image/1.jpg" alt="" /></div>
+
+            <div class="info">
+              <span class="title"
+                >고양이 사진 첫 번째 사진. 정말 귀엽게 생긴 고 양이 이기 때문에
+                정말 인기가 많을 것이라고 생각하는 바이다. 정 말이다.
+              </span>
+              <span class="name">드림코딩 by Yu</span>
+              <span class="views">900K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+          <li class="item">
+            <div class="img"><img src="image/2.jpg" alt="" /></div>
+            <div class="info">
+              <span class="title"
+                >고양이 사진 두 번째 사진. 정말 귀엽게 생긴 고 양이 이기 때문에
+                정말 인기가 많을 것이라고 생각하는 바이다. 정 말이다.
+              </span>
+              <span class="name">드림코딩 by Yu</span>
+              <span class="views">900K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+          <li class="item">
+            <div class="img"><img src="image/3.png" alt="" /></div>
+            <div class="info">
+              <span class="title"
+                >정말로 다가 사진. 정말 귀엽게 생긴 고 양이 이기 때문에 정말
+                인기가 많을 것이라고 생각하는 바이다. 정 말이다.
+              </span>
+              <span class="name">드림코딩 by Yu</span>
+              <span class="views">900K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+        </ul>
+      </section>
+    </div>
   </body>
 </html>
