@@ -28,10 +28,12 @@ function paintTodo(text) {
 
   delBtn.innerText = "X";
   delBtn.addEventListener("click", deleteTodo);
+  delBtn.classList.add("delBtn");
   span.innerText = text;
   li.appendChild(delBtn); // li 밑에 할일과 X버튼 추가
   li.appendChild(span);
   li.id = newID;
+  li.classList.add("list");
   todoList.appendChild(li); // li를 상위 ul에 추가
 
   // LS에 todo 저장
