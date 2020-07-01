@@ -1,6 +1,5 @@
 .middle {
   display: flex;
-  flex: 1;
   background-color: rgb(246, 248, 250);
 }
 
@@ -10,7 +9,7 @@
   padding-top: 30px;
   background-color: white;
   border-right: 1px solid rgb(221, 218, 218);
-  flex: 2;
+  flex: 1.6;
 }
 .left .repoList {
   margin-top: 30px;

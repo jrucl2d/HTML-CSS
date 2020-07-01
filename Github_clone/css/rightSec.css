@@ -1,4 +1,90 @@
 .right {
-  min-width: 250px;
-  flex: 2;
+  flex: 1.3;
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.right .bluePopUp {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px 12px;
+  color: white;
+  background-color: rgb(71, 100, 241);
+}
+.right .bluePopUp .name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 25px;
+}
+.right .bluePopUp button {
+  all: unset;
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.right .bluePopUp .content {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.right .exploreRepos {
+  margin: 25px 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+.right > ul > li {
+  font-size: 12px;
+  line-height: 17px;
+}
+.right > ul > li .name {
+  margin-top: 12px;
+  font-weight: 500;
+}
+.right > ul > li .desc {
+  color: grey;
+
+  margin-bottom: 7px;
+}
+.right > ul > li .star {
+  padding-bottom: 7px;
+  color: rgb(102, 100, 100);
+}
+.right > ul > li .yes {
+  border-bottom: 1px solid rgb(231, 229, 229);
+}
+.right > ul > li .star .blueCircle {
+  all: unset;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.right > ul > li .star .peachCircle {
+  all: unset;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: hotpink;
+}
+.right > ul > li .star .brownCircle {
+  all: unset;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: brown;
+}
+.right > ul > li .star span {
+  margin-right: 10px;
+}
+
+.right > ul .end {
+  font-weight: 400;
+  margin-top: 12px;
+  color: rgb(102, 100, 100);
+}
+.right > ul .end i {
+  font-size: 8px;
 }
