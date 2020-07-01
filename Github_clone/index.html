@@ -7,7 +7,7 @@
       src="https://kit.fontawesome.com/dcf5976e5d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     <!-- 최상단 헤더-->
@@ -16,7 +16,7 @@
         <i class="fab fa-github"></i>
       </div>
       <form class="search">
-        <input type="text" placeholder="   Search or jump to..." /> 
+        <input type="text" placeholder="Search or jump to..." /> 
         <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
       </form>
       <div class="menu">
@@ -28,13 +28,116 @@
       <div class="icon">
         <button class="icons"><i class="far fa-bell"></i></button>
         <button class="icons"><i class="fas fa-plus"><i class="fas fa-sort-down"></i></i></button>
-        <button class="icons"><img height="20px" src="image/account.jpg"><i class="fas fa-sort-down"></i></button>
+        <button class="icons"><img src="image/account.jpg"><i class="fas fa-sort-down"></i></button>
       </div>
     </header>
 
-    <section></section>
-    <section></section>
-    <section></section>
-    <footer></footer>
+    <section class="left">
+      <div class="repoList">
+        <span>Repositories</span>
+        <button class="newRepo">New</button>
+        <form class="findRepo">
+          <input type="text"/>
+        </form>
+        <ul>
+          <li>jrucl2d/Baekjoon</li>
+          <li>jrucl2d/BetweenUs</li>
+          <li>jrucl2d/Web_Clone_Coding</li>
+          <li>jrucl2d/3-2-Algorithm-Homework</li>
+          <li>jrucl2d/Calendar</li>
+          <li>jrucl2d/Mine-Omok-Game-Java-Project</li>
+          <li>jrucl2d/CRC</li>
+          <li>CSID-DGU/2019-2-OSSP1-3355-3</li>
+        </ul>
+      </div>
+      <div class="repoInfo">
+        <div>Working with a team?</div>
+        <div>GitHub is built for collaboration. Set up an organization to improve the way your team works together, and get access to more features.</div>
+        <button>Create an organization</button>
+      </div>
+    </section>
+
+    <section class="center">
+      <div>Discover interesting projects and people to populate your personal news feed.</div>
+      <div>Your news feed helps you keep up with recent activity on repositories you watch and people you follow.</div>
+      <button>Explore GitHub</button>
+      <div><i class="far fa-lightbulb"></i> ProTip! The feed shows you events from people you follow and repositories you watch.</div>
+      <div><i class="fas fa-wifi"></i> Subscribe to your news feed</div>
+    </section>
+
+    <section class="right">
+      <div class="bluePopUp">
+        <span>GitHub is now free for teams</span>
+        <i class="fas fa-times"></i>
+        <span>GitHub Free gives teams private repositories with unlimited collaborators at no cost. GitHub Team is now reduced to $4 per user/month.</span>
+      </div>
+      <button class="exploreRepos">
+        Explore Repositories
+      </button>
+      <ul>
+        <li>
+          <div>TensorSpeech/TensorflowTTS</div>
+          <div>😝 TensorflowTTS: Real-Time State-of-the-art Speech Synthesis for Tensorflow 2</div>
+          <div> 
+            <span class="blueCircle"></span>
+            Python
+            <i class="far fa-star"></i>
+            404
+          </div>
+        </li>
+        <li>
+          <div>paritytech/substrate</div>
+          <div>Substrate: The platform for blockchain innovators</div>
+          <div> 
+            <span class="peachCircle"></span>
+            Rust
+            <i class="far fa-star"></i>
+            2.4k
+          </div>
+        </li>
+        <li>
+          <div>Vazkii/Botania</div>
+          <div>A magic themed tech mod for Minecraft based on nature and plant life.</div>
+          <div> 
+            <span class="brownCircle"></span>
+            Java
+            <i class="far fa-star"></i>
+            2.4k
+          </div>
+        </li>
+        <li>
+          Explore more <i class="fas fa-arrow-right"></i>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <i class="fab fa-github"></i>
+      <span>ⓒ 2020 GitHub, Inc.</span>
+      <span>
+        <ul>
+          <li>Blog</li>
+          <li>About</li>
+          <li>Shop</li>
+          <li>Contact GitHub</li>
+          <li>Pricing</li>
+        </ul>
+      </span>
+      <span>
+        <ul>
+          <li>API</li>
+          <li>Training</li>
+          <li>Status</li>
+          <li>Security</li>
+        </ul>
+      </span>
+      <span>
+        <ul>
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Help</li>
+        </ul>
+      </span>
+    </footer>
   </body>
 </html>
