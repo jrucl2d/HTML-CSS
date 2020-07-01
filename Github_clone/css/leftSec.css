@@ -1,4 +1,115 @@
+.middle {
+  display: flex;
+  flex: 1;
+  background-color: rgb(246, 248, 250);
+}
+
+.left {
+  min-width: 250px;
+  max-width: 500px;
+  padding-top: 30px;
+  background-color: white;
+  border-right: 1px solid rgb(221, 218, 218);
+  flex: 2;
+}
+.left .repoList {
+  margin-top: 30px;
+  margin: 0 20px 20px 20px;
+}
+.left .repoList .repoName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left .repoList span {
+  /* Repositories */
+  font-weight: 500;
+}
+.left .repoList .newRepo {
+  all: unset;
+  border: 1px solid rgb(99, 96, 96);
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: rgb(20, 182, 15);
+  color: white;
+}
+.left .repoList .findRepo {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+.left .repoList .findRepo input {
+  all: unset;
+  width: 94%;
+  height: 28px;
+  border: 1px solid rgb(192, 184, 184);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+.left .repoList .findRepo input::placeholder {
+  color: rgb(192, 184, 184);
+}
 .left .repoList ul li {
+  display: inline-block;
+  width: 94%;
+  margin-top: 9px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
+  color: #0366d6;
+  font-weight: 600;
+}
+.left .repoList ul li svg {
+  margin-right: 8px;
+}
+.left .repoList ul li span {
+  position: relative;
+  bottom: 4px;
+}
+.left .repoList ul li:nth-of-type(n + 8) {
+  /* 나중에 이거 늘어나면 처리 */
+  display: none;
+}
+
+.left .repoList .showMore {
+  margin-top: 15px;
+  font-size: 12px;
+  color: grey;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.left .repoInfo {
+  border-top: 1px solid rgb(221, 218, 218);
+  padding-top: 20px;
+  margin-top: 30px;
+  margin: 0px 20px;
+  width: 80%;
+  padding-bottom: 50%;
+}
+.left .repoInfo .repoInfoName {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(73, 72, 72);
+}
+.left .repoInfo .repoInfoContent {
+  line-height: 21px;
+  font-size: 14px;
+  color: rgb(48, 46, 46);
+}
+.left .repoInfo button {
+  all: unset;
+  border: 1px solid rgb(184, 179, 179);
+  border-radius: 5px;
+  background-color: rgb(248, 248, 248);
+  margin-top: 7px;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: #0366d6;
+  font-weight: 600;
+  cursor: pointer;
 }

@@ -13,13 +13,14 @@ body {
 header {
   display: flex;
   background-color: var(--gray);
+  padding-bottom: 10px;
 }
 .logo {
   font-size: 33px;
   color: var(--white);
   margin: 0 15px;
-  margin-top: 4px;
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: px;
 }
 .search {
   position: absolute;
@@ -49,7 +50,7 @@ header {
 .menu {
   position: absolute;
   left: 383px;
-  margin-top: 15px;
+  margin-top: 18px;
 }
 .menus {
   all: unset;
