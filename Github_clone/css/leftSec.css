@@ -4,12 +4,10 @@
 }
 
 .left {
-  min-width: 250px;
-  max-width: 500px;
   padding-top: 30px;
+  flex: 1 1 20%;
   background-color: white;
   border-right: 1px solid rgb(221, 218, 218);
-  flex: 1.6;
 }
 .left .repoList {
   margin-top: 30px;
@@ -33,6 +31,10 @@
   background-color: rgb(20, 182, 15);
   color: white;
 }
+.left .repoList .newRepo:hover {
+  background-color: rgb(15, 141, 11);
+  cursor: pointer;
+}
 .left .repoList .findRepo {
   display: flex;
   justify-content: center;
@@ -53,7 +55,7 @@
 }
 .left .repoList ul li {
   display: inline-block;
-  width: 94%;
+  width: 90%;
   margin-top: 9px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -111,4 +113,24 @@
   color: #0366d6;
   font-weight: 600;
   cursor: pointer;
+}
+.left .repoInfo button:hover {
+  color: rgb(248, 248, 248);
+  background-color: #0366d6;
+}
+
+@media screen and (max-width: 1010px) {
+  .left {
+    flex: 1 1 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .middle {
+    margin: 30px;
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .repoInfo {
+    display: none;
+  }
 }

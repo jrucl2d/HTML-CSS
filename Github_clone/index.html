@@ -12,23 +12,27 @@
   <body>
     <!-- 최상단 헤더-->
     <header>
-      <div class="logo">
-        <i class="fab fa-github"></i>
+      <i class="fas fa-bars"></i>
+      <div class="upleft">
+        <div class="logo">
+          <i class="fab fa-github"></i>
+        </div>
+        <form class="search gone">
+          <input type="text" placeholder="Search or jump to..." /> 
+          <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+        </form>
+        <div class="menu gone">
+          <button class="menus">Pull requests</button>
+          <button class="menus">Issues</button>
+          <button class="menus">Marketplace</button>
+          <button class="menus">Explore</button>
+        </div>
       </div>
-      <form class="search">
-        <input type="text" placeholder="Search or jump to..." /> 
-        <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
-      </form>
-      <div class="menu">
-        <button class="menus">Pull requests</button>
-        <button class="menus">Issues</button>
-        <button class="menus">Marketplace</button>
-        <button class="menus">Explore</button>
-      </div>
+
       <div class="icon">
         <button class="icons"><i class="far fa-bell"></i></button>
-        <button class="icons"><i class="fas fa-plus"><i class="fas fa-sort-down"></i></i></button>
-        <button class="icons"><img src="image/account.jpg"><i class="fas fa-sort-down"></i></button>
+        <button class="icons gone"><i class="fas fa-plus"><i class="fas fa-sort-down"></i></i></button>
+        <button class="icons gone"><img src="image/account.jpg"><i class="fas fa-sort-down"></i></button>
       </div>
     </header>
 
@@ -81,8 +85,7 @@
                 <li>Blog</li>
                 <li>About</li>
                 <li>Shop</li>
-                <li>Contact</li>
-                <li>GitHub</li>
+                <li>Contact GitHub</li>
                 <li>Pricing</li>
               </ul>
             </span>

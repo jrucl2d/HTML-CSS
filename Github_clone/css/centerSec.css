@@ -1,6 +1,7 @@
 .middle .center {
-  flex: 3;
   display: flex;
+  flex: 1 1 70%;
+
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -70,9 +71,11 @@
 }
 
 .center .centerDownside .centerDown_down {
+  justify-self: right;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  padding-bottom: 20px;
 }
 .center .centerDownside .centerDown_down .willGone {
   position: relative;
@@ -91,4 +94,21 @@
   font-size: 12px;
   color: rgb(88, 87, 87);
   line-height: 20px;
+}
+@media screen and (max-width: 1010px) {
+  .center {
+    flex: 2 2 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .center .centerDownside .centerDown_down .willGone {
+    display: none;
+  }
+  .center .centerDownside .centerDown_down {
+    justify-content: flex-start;
+  }
+  .center .centerDownside .centerDown_down span {
+    margin-right: 180px;
+  }
 }
