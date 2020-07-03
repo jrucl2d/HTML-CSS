@@ -1,158 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meathub</title>
-    <script
-      src="https://kit.fontawesome.com/dcf5976e5d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/style.css"/>
-  </head>
-  <body>
-    <!-- 최상단 헤더-->
-    <header>
-      <i class="fas fa-bars"></i>
-      <div class="upleft">
-        <div class="logo">
-          <i class="fab fa-github"></i>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meathub</title>
+<script src="https://kit.fontawesome.com/dcf5976e5d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="main.js"></script>
+</head>
+
+<body>
+  <!-- 최상단 헤더-->
+  <header>
+    <i class="fas fa-bars"></i>
+    <div class="upleft">
+      <div class="logo">
+        <i class="fab fa-github"></i>
+      </div>
+      <form class="search gone">
+        <input class="js-searchBar"type="text" placeholder="Search or jump to..." />
+        <img src="https://github.githubassets.com/images/search-key-slash.svg" alt=""
+          class="mr-2 header-search-key-slash">
+          <ol class="search_history">
+            <li><a href=""><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg>jrucl2d/Calendar</a></li>
+            <li><a href=""><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg>jrucl2d/Web_Clone_Coding</a></li>
+            <li><a href="#"><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg>jrucl2d/Good_App</a></li>
+          </ol>
+      </form>
+      <div class="menu gone">
+        <button class="menus">Pull requests</button>
+        <button class="menus">Issues</button>
+        <button class="menus">Marketplace</button>
+        <button class="menus">Explore</button>
+      </div>
+    </div>
+
+    <div class="icon">
+      <button class="icons"><i class="far fa-bell"></i></button>
+      <button class="icons gone"><i class="fas fa-plus"><i class="fas fa-sort-down"></i></i></button>
+      <button class="icons gone"><img src="image/account.jpg"><i class="fas fa-sort-down"></i></button>
+    </div>
+  </header>
+
+  <section class="middle">
+    <section class="left">
+      <div class="repoList">
+        <div class="repoName">
+          <span>Repositories</span>
+          <button class="newRepo"><i class="fas fa-save"></i> New</button>
         </div>
-        <form class="search gone">
-          <input type="text" placeholder="Search or jump to..." /> 
-          <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+        <form class="findRepo">
+          <input placeholder="Find a repository..." type="text" />
         </form>
-        <div class="menu gone">
-          <button class="menus">Pull requests</button>
-          <button class="menus">Issues</button>
-          <button class="menus">Marketplace</button>
-          <button class="menus">Explore</button>
-        </div>
-      </div>
-
-      <div class="icon">
-        <button class="icons"><i class="far fa-bell"></i></button>
-        <button class="icons gone"><i class="fas fa-plus"><i class="fas fa-sort-down"></i></i></button>
-        <button class="icons gone"><img src="image/account.jpg"><i class="fas fa-sort-down"></i></button>
-      </div>
-    </header>
-
-    <section class="middle">
-      <section class="left">
-        <div class="repoList">
-          <div class="repoName">
-            <span>Repositories</span>
-            <button class="newRepo"><i class="fas fa-save"></i>    New</button>
-          </div>
-          <form class="findRepo">
-            <input placeholder="Find a repository..." type="text"/>
-          </form>
-          <ul>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>jrucl2d/Baekjoon</span></li>
-            <li><svg class="octicon octicon-lock repo-private-icon flex-shrink-0" aria-label="Repository" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M4 4v2h-.25A1.75 1.75 0 002 7.75v5.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-5.5A1.75 1.75 0 0012.25 6H12V4a4 4 0 10-8 0zm6.5 2V4a2.5 2.5 0 00-5 0v2h5zM12 7.5h.25a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-5.5a.25.25 0 01.25-.25H12z"></path></svg><span>jrucl2d/BetweenUs</span></li>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>jrucl2d/Web_Clone_Coding</span></li>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>jrucl2d/3-2-Algorithm-Homework</span></li>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>jrucl2d/Calendar</span></li>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>jrucl2d/Mine-Omok-Game-Java-Project</span></li>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>jrucl2d/CRC</span></li>
-            <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg><span>CSID-DGU/2019-2-OSSP1-3355-3</span></li>
-          </ul>
-          <div class="showMore">Show more</div>
-        </div>
-        <div class="repoInfo">
-          <div class="repoInfoName">Working with a team?</div>
-          <div class="repoInfoContent">GitHub is built for collaboration. Set up an organization to improve the way your team works together, and get access to more features.</div>
-          <button>Create an organization</button>
-        </div>
-      </section>
-  
-      <section class="center">
-        <div class="centerUpside">
-          <div class="centerMain">Discover interesting projects and people to populate your personal news feed.</div>
-          <div class="centerSub">Your news feed helps you keep up with recent activity on repositories you <a href="#">watch</a> and people you <a href="#">follow</a>.</div>
-          <button>Explore GitHub</button>
-        </div>
-        <div class="centerDownside">
-          <div class="centerDown_up">
-            <div class="first"><i class="far fa-lightbulb"></i>  ProTip! The feed shows you events from people you follow and repositories you watch.</div>
-            <div class="second"><i class="fas fa-wifi"></i> Subscribe to your news feed</div>
-          </div>
-
-          <div class="centerDown_down">
-            
-            <span class="willGone"><i class="fab fa-github"></i> ⓒ 2020 GitHub, Inc.</span>
-            <span>
-              <ul>
-                <li>Blog</li>
-                <li>About</li>
-                <li>Shop</li>
-                <li>Contact GitHub</li>
-                <li>Pricing</li>
-              </ul>
-            </span>
-            <span>
-              <ul>
-                <li>API</li>
-                <li>Training</li>
-                <li>Status</li>
-                <li>Security</li>
-              </ul>
-            </span>
-            <span>
-              <ul>
-                <li>Terms</li>
-                <li>Privacy</li>
-                <li>Help</li>
-              </ul>
-            </span>
-          </div>
-        </div>
-      </section>
-  
-      <section class="right">
-        <div class="bluePopUp">
-          <button>X</button>
-          <span class="name">GitHub is now free for teams</span>   
-          <div class="content">GitHub Free gives teams private repositories with unlimited collaborators at no cost. GitHub Team is now reduced to $4 per user/month.</div>
-        </div>
-        <div class="exploreRepos">
-          Explore Repositories
-        </div>
         <ul>
-          <li>
-            <div class="name">TensorSpeech/TensorflowTTS</div>
-            <div class="desc">😝 TensorflowTTS: Real-Time State-of-the-art Speech Synthesis for Tensorflow 2</div>
-            <div class="star yes"> 
-              <button class="blueCircle"></button>
-              <span>Python</span>
-              <i class="far fa-star"></i>
-              404
-            </div>
-          </li>
-          <li>
-            <div class="name">paritytech/substrate</div>
-            <div class="desc">Substrate: The platform for blockchain innovators</div>
-            <div class="star yes"> 
-              <button class="peachCircle"> </button>
-              <span>Rust</span>  
-              <i class="far fa-star"></i>
-              2.4k
-            </div>
-          </li>
-          <li>
-            <div class="name">Vazkii/Botania</div>
-            <div class="desc">A magic themed tech mod for Minecraft based on nature and plant life.</div>
-            <div class="star"> 
-              <button class="brownCircle"></button>
-              <span>Java</span>
-              <i class="far fa-star"></i>
-              2.4k
-            </div>
-          </li>
-          <li class="end">
-            Explore more <i class="fas fa-arrow-right"></i>
-          </li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>jrucl2d/Baekjoon</span></li>
+          <li><svg class="octicon octicon-lock repo-private-icon flex-shrink-0" aria-label="Repository"
+              viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M4 4v2h-.25A1.75 1.75 0 002 7.75v5.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-5.5A1.75 1.75 0 0012.25 6H12V4a4 4 0 10-8 0zm6.5 2V4a2.5 2.5 0 00-5 0v2h5zM12 7.5h.25a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-5.5a.25.25 0 01.25-.25H12z">
+              </path>
+            </svg><span>jrucl2d/BetweenUs</span></li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>jrucl2d/Web_Clone_Coding</span></li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>jrucl2d/3-2-Algorithm-Homework</span></li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>jrucl2d/Calendar</span></li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>jrucl2d/Mine-Omok-Game-Java-Project</span></li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>jrucl2d/CRC</span></li>
+          <li><svg aria-label="Repository" class="octicon octicon-repo flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+              width="16" height="16" role="img">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg><span>CSID-DGU/2019-2-OSSP1-3355-3</span></li>
         </ul>
-      </section>
+        <div class="showMore">Show more</div>
+      </div>
+      <div class="repoInfo">
+        <div class="repoInfoName">Working with a team?</div>
+        <div class="repoInfoContent">GitHub is built for collaboration. Set up an organization to improve the way your
+          team works together, and get access to more features.</div>
+        <button>Create an organization</button>
+      </div>
     </section>
-  </body>
+
+    <section class="center">
+      <div class="centerUpside">
+        <div class="centerMain">Discover interesting projects and people to populate your personal news feed.</div>
+        <div class="centerSub">Your news feed helps you keep up with recent activity on repositories you <a
+            href="#">watch</a> and people you <a href="#">follow</a>.</div>
+        <button>Explore GitHub</button>
+      </div>
+      <div class="centerDownside">
+        <div class="centerDown_up">
+          <div class="first"><i class="far fa-lightbulb"></i> ProTip! The feed shows you events from people you follow
+            and repositories you watch.</div>
+          <div class="second"><i class="fas fa-wifi"></i> Subscribe to your news feed</div>
+        </div>
+
+        <div class="centerDown_down">
+
+          <span class="willGone"><i class="fab fa-github"></i> ⓒ 2020 GitHub, Inc.</span>
+          <span>
+            <ul>
+              <li>Blog</li>
+              <li>About</li>
+              <li>Shop</li>
+              <li>Contact GitHub</li>
+              <li>Pricing</li>
+            </ul>
+          </span>
+          <span>
+            <ul>
+              <li>API</li>
+              <li>Training</li>
+              <li>Status</li>
+              <li>Security</li>
+            </ul>
+          </span>
+          <span>
+            <ul>
+              <li>Terms</li>
+              <li>Privacy</li>
+              <li>Help</li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="bluePopUp">
+        <button>X</button>
+        <span class="name">GitHub is now free for teams</span>
+        <div class="content">GitHub Free gives teams private repositories with unlimited collaborators at no cost.
+          GitHub Team is now reduced to $4 per user/month.</div>
+      </div>
+      <div class="exploreRepos">
+        Explore Repositories
+      </div>
+      <ul>
+        <li>
+          <div class="name">TensorSpeech/TensorflowTTS</div>
+          <div class="desc">😝 TensorflowTTS: Real-Time State-of-the-art Speech Synthesis for Tensorflow 2</div>
+          <div class="star yes">
+            <button class="blueCircle"></button>
+            <span>Python</span>
+            <i class="far fa-star"></i>
+            404
+          </div>
+        </li>
+        <li>
+          <div class="name">paritytech/substrate</div>
+          <div class="desc">Substrate: The platform for blockchain innovators</div>
+          <div class="star yes">
+            <button class="peachCircle"> </button>
+            <span>Rust</span>
+            <i class="far fa-star"></i>
+            2.4k
+          </div>
+        </li>
+        <li>
+          <div class="name">Vazkii/Botania</div>
+          <div class="desc">A magic themed tech mod for Minecraft based on nature and plant life.</div>
+          <div class="star">
+            <button class="brownCircle"></button>
+            <span>Java</span>
+            <i class="far fa-star"></i>
+            2.4k
+          </div>
+        </li>
+        <li class="end">
+          Explore more <i class="fas fa-arrow-right"></i>
+        </li>
+      </ul>
+    </section>
+  </section>
+</body>
+
 </html>

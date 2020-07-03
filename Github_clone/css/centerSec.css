@@ -1,6 +1,6 @@
 .middle .center {
   display: flex;
-  flex: 1 1 70%;
+  flex: 2;
 
   flex-direction: column;
   justify-content: flex-start;

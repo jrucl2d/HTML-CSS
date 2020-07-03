@@ -5,9 +5,10 @@
 
 .left {
   padding-top: 30px;
-  flex: 1 1 20%;
+  flex: 1;
   background-color: white;
   border-right: 1px solid rgb(221, 218, 218);
+  width: 100%;
 }
 .left .repoList {
   margin-top: 30px;
@@ -65,6 +66,10 @@
 }
 .left .repoList ul li svg {
   margin-right: 8px;
+  fill: #6a737d;
+}
+.left .repoList ul li .octicon-lock {
+  fill: #dbab09;
 }
 .left .repoList ul li span {
   position: relative;
@@ -80,10 +85,11 @@
   font-size: 12px;
   color: grey;
   font-weight: 400;
-  cursor: pointer;
 }
 
 .left .repoInfo {
+  cursor: auto;
+
   border-top: 1px solid rgb(221, 218, 218);
   padding-top: 20px;
   margin-top: 30px;
