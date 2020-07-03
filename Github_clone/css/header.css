@@ -60,6 +60,7 @@ header {
 }
 .search .long {
   width: 400px;
+  margin-right: 20px;
   background-color: white;
   font-size: 13px;
   font-weight: 300;
@@ -94,8 +95,11 @@ header {
   margin: 0 10px;
   fill: #6a737d;
 }
-
 .search img {
+  display: none;
+}
+.search .showSearchIcon {
+  display: inline;
   position: relative;
   top: 4px;
   right: 28px;
