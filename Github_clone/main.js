@@ -5,6 +5,10 @@ function init() {
   const searchedHistory = document.querySelector(".search_history");
   const searchBar = document.querySelector(".js-searchBar");
   const hideIcon = document.querySelector(".header-search-key-slash");
+  const bluePopup = document.querySelector(".bluePopUp");
+  const bluePopupBtn = document.querySelector(".BpopXBtn");
+  const repolists = document.querySelectorAll(".repoLists");
+  const showMoreBtn = document.querySelector(".showMore");
   let clicked = false;
 
   function showSeachHistory() {
@@ -12,6 +16,10 @@ function init() {
     searchBar.classList.toggle("long");
     hideIcon.classList.toggle("showSearchIcon");
   }
+
+  bluePopupBtn.addEventListener("click", () => {
+    bluePopup.classList.add("bluePopUpGone");
+  });
 
   searchBar.addEventListener("click", () => {
     if (searchedHistory.classList.contains("show")) {
@@ -29,6 +37,12 @@ function init() {
       // 2. 다른 곳 클릭했으나 검색창 켜져있으면
       showSeachHistory();
     }
+  });
+  showMoreBtn.addEventListener("click", () => {
+    for (let i = 7; i < repolists.length; i++) {
+      repolists[i].classList.remove("noshow");
+    }
+    showMoreBtn.classList.add("noshow");
   });
 }
 

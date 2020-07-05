@@ -75,16 +75,21 @@
   position: relative;
   bottom: 4px;
 }
-.left .repoList ul li:nth-of-type(n + 8) {
+.left .repoList ul .noshow {
   /* 나중에 이거 늘어나면 처리 */
   display: none;
 }
 
 .left .repoList .showMore {
-  margin-top: 15px;
+  margin-top: 5px;
+  padding: 10px 0;
   font-size: 12px;
   color: grey;
   font-weight: 400;
+  cursor: pointer;
+}
+.left .repoList .noshow {
+  display: none;
 }
 
 .left .repoInfo {
