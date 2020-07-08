@@ -5,18 +5,13 @@ function init() {
   const body = document.querySelector(".body");
   const modalLayer = document.querySelector(".modalLayer");
 
-  // default로 모달 창은 보이지 않음
-  modalWindow.style.display = "none";
-
   showBtn.addEventListener("click", () => {
     // show 버튼 누르면 모달 레이어와 모달 윈도우 보임
     // body < modal layer < modal window
-    modalLayer.style.display = "block";
-    modalWindow.style.display = "block";
+    modalLayer.classList.toggle("modalShow");
   });
   closeBtn.addEventListener("click", () => {
-    modalLayer.style.display = "none";
-    modalWindow.style.display = "none";
+    modalLayer.classList.toggle("modalShow");
   });
 }
 init();

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      .callout {
+        display: block;
+        width: 600px;
+        background-color: bisque;
+        transition: 0.5s transform cubic-bezier(0.82, 0.09, 0.53, 1.4);
+        transform-origin: 1.4em -0.4em;
+      }
+      input:not(:focus) + .callout {
+        transform: scale(0);
+        transition: 0.25s;
+      }
+    </style>
+  </head>
+  <body>
+    <label>
+      Your name:
+      <input type="text" />
+      <span class="callout"
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+        aliquam.</span
+      >
+    </label>
+  </body>
+</html>
