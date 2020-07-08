@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
+    <style>
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+      @keyframes caret {
+        50% {
+          border-right: 0.05em solid black;
+        }
+      }
+      body {
+        font-family: monospace;
+      }
+      h1 {
+        overflow: hidden;
+        width: 26ch;
+        white-space: nowrap;
+        border-right: transparent;
+        animation: typing 2s 1 steps(26), caret 0.5s infinite steps(1);
+      }
+    </style>
+    <script defer>
+      window.onload = function () {
+        const h1List = document.querySelectorAll("h1");
+        h1List.forEach((h1) => {
+          const len = h1.textContent.length;
+          h1.style.width = `${len}ch`;
+          h1.style.animationTimingFunction = `steps(${len}), steps(1)`;
+        });
+      };
+    </script>
   </head>
   <body>
     <h1>Interactive Sites Practice</h1>
+    <h1>By YuSeongGeun</h1>
     <ul>
       <li><a href="modal.html">Modal </a></li>
       <li><a href="slider.html">Slider</a></li>

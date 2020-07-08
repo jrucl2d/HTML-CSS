@@ -11,9 +11,9 @@ h1 {
   text-align: center;
 }
 .sliderWindow {
-  width: 80%;
-  height: 400px;
   margin: 0 auto;
+  width: 80%;
+  height: 80%;
   text-align: center;
   background-color: rgb(198, 240, 136);
   display: flex;
