@@ -53,6 +53,10 @@ img {
   display: flex;
   padding: 0;
 }
+.canvas ul li {
+  margin: 0 2px;
+  height: 0px; /* 이벤트 위임에서 li를 클릭할 수 없도록 높이 0으로 설정*/
+}
 .canvas ul li button {
   all: unset;
   width: 10px;
@@ -62,7 +66,6 @@ img {
   background-color: grey;
   opacity: 50%;
   cursor: pointer;
-  margin: 0 2px;
 }
 .canvas ul li .select {
   background-color: black;
