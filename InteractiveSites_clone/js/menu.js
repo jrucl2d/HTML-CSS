@@ -1,8 +1,7 @@
 function init() {
-  const btn = document.querySelector(".fas");
-  const menu = document.querySelector(".menus");
+  const btn = document.querySelector(".btn");
   btn.addEventListener("click", () => {
-    menu.classList.toggle("menusShow");
+    btn.classList.toggle("btnclicked");
   });
 }
 init();
