@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab1</title>
+    <style>
+      @keyframes appear {
+        from {
+          left: 25%;
+        }
+        to {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .tab_content {
+        text-align: center;
+        position: relative; /* 내부의 conbox를 absolute으로 하기 위한 기준 */
+      }
+      input[type="radio"] {
+        /* 버튼 안 보이게 */
+        display: none;
+      }
+      input[type="radio"] + label {
+        /* 라디오 버튼을 대신하는 라벨(버튼 모양) */
+        display: inline-block;
+        padding: 20px;
+        background-color: #ccc;
+        color: #999;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      input[type="radio"]:checked + label {
+        /* 하나만 선택되는 라디오 버튼의 특성을 이용 */
+        background: #aaa;
+        color: #888;
+      }
+      .conbox {
+        width: 500px;
+        height: 500px;
+        background-color: #aaa;
+        display: none;
+        position: absolute;
+      }
+      #tab01:checked ~ .con1 {
+        display: block;
+        /* 체크 되면 실행되는 애니메이션 */
+        animation: appear 0.5s forwards linear;
+      }
+      #tab02:checked ~ .con2 {
+        display: block;
+        animation: appear 0.5s forwards linear;
+      }
+      #tab03:checked ~ .con3 {
+        display: block;
+        animation: appear 0.5s forwards linear;
+      }
+
+      #mycheck {
+        display: none;
+      }
+      #mycheck:hover + label {
+        cursor: pointer;
+      }
+      .after {
+        display: none;
+      }
+      #mycheck:checked + label > .before {
+        display: none;
+      }
+      #mycheck:checked + label > .after {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab_content">
+      <input type="radio" id="tab01" name="tab" checked />
+      <label for="tab01">btn 1</label>
+      <input type="radio" id="tab02" name="tab" />
+      <label for="tab02">btn 2</label>
+      <input type="radio" id="tab03" name="tab" />
+      <label for="tab03">btn 3</label>
+
+      <div class="conbox con1">
+        content 1<br />
+        <input type="checkbox" id="mycheck" />
+        <label for="mycheck">
+          <span class="before">X</span>
+          <span class="after">O</span>
+        </label>
+      </div>
+      <div class="conbox con2">content 2</div>
+      <div class="conbox con3">content 3</div>
+    </div>
+  </body>
+</html>
