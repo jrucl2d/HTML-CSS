@@ -5,7 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tab2</title>
   </head>
+  <style>
+    @keyframes appear {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    html,
+    body {
+      height: 100%;
+    }
+    .tabcontent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background-color: antiquewhite;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    .conbox {
+      position: relative;
+      width: 500px;
+      height: 400px;
+      display: none;
+    }
+    .btn {
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .btn label {
+      width: 40px;
+      margin: 0 10px;
+      border-radius: 50%;
+      background-color: rgb(182, 180, 180);
+    }
+    .btn label:hover {
+      cursor: pointer;
+    }
+    .con1 {
+      background: no-repeat center/100% url(Images/1.jpg);
+    }
+    .con2 {
+      background: no-repeat center/100% url(Images/2.jpg);
+    }
+    .con3 {
+      background: no-repeat center/100% url(Images/3.jpg);
+    }
+    #tab01:checked ~ .con1 {
+      display: block;
+      animation: appear 1s;
+    }
+    #tab01:checked ~ .btn label[for="tab01"] {
+      background-color: grey;
+    }
+    #tab02:checked ~ .con2 {
+      display: block;
+      animation: appear 1s;
+    }
+    #tab02:checked ~ .btn label[for="tab02"] {
+      background-color: grey;
+    }
+    #tab03:checked ~ .con3 {
+      display: block;
+      animation: appear 1s;
+    }
+    #tab03:checked ~ .btn label[for="tab03"] {
+      background-color: grey;
+    }
+  </style>
   <body>
     <a href="index.html">Go back</a>
+    <div class="tabcontent">
+      <!-- 가려져 보이지 않을 예정 -->
+      <input type="radio" name="tabmenu" id="tab01" checked />
+      <input type="radio" name="tabmenu" id="tab02" />
+      <input type="radio" name="tabmenu" id="tab03" />
+
+      <!-- 실제 내용물이 보이는 공간 -->
+      <div class="conbox con1">
+        content1
+      </div>
+      <div class="conbox con2">
+        content2
+      </div>
+      <div class="conbox con3">
+        content3
+      </div>
+
+      <!-- 실질적으로 라디오버튼의 역할을 함 -->
+      <div class="btn">
+        <label for="tab01"></label>
+        <label for="tab02"></label>
+        <label for="tab03"></label>
+      </div>
+    </div>
   </body>
 </html>
