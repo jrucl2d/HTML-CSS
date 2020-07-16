@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            line-height: 1;
+        }
+        html, body{
+            height:100%;
+        }
+        .accordion{
+            width:50%;
+            margin:0 auto;
+            margin-top:100px;
+
+        }
+        input[id*="select"]{
+            display: none;
+        }
+        input+label{
+            display:block;
+            padding:20px;
+            border : 1px solid black;
+            border-bottom: 0;
+            color:#fff;
+            background-color: #3634a5;
+            cursor: pointer;
+            position:relative;
+        }
+        input+label em{
+            position:absolute;
+            top:50%;
+            right:10px;
+            width:30px;
+            height:30px;
+            margin-top:-15px;
+            display: inline-block;
+            background: url("Images/arrow.png") 0 0 no-repeat;
+        }
+        input+label + div{
+            max-height: 0;
+            transition: all 0.5s;
+            overflow: hidden;
+            background-color: #ebf8ff;
+            font-size: 11px;
+        }
+        input+label + div p{
+            display: inline-block;
+            padding:20px;
+        }
+        input:checked + label + div {
+            max-height: 100px;
+        }
+        input:checked + label em{
+            background-position: 0 -30px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Go back</a>
+    <div class="accordion">
+        <input type="checkbox" id="select01">
+        <label for="select01">Content1<em></em></label>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laborum, 
+                similique voluptatem deleniti nesciunt earum eaque in commodi eum facilis?
+            </p>
+        </div>
+        <input type="checkbox" id="select02">
+        <label for="select02">Content2<em></em></label>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laborum, 
+                similique voluptatem deleniti nesciunt earum eaque in commodi eum facilis?
+            </p>
+        </div>
+        <input type="checkbox" id="select03">
+        <label for="select03">Content3<em></em></label>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laborum, 
+                similique voluptatem deleniti nesciunt earum eaque in commodi eum facilis?
+            </p>
+        </div>
+        <input type="checkbox" id="select04">
+        <label for="select04">Content4<em></em></label>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laborum, 
+                similique voluptatem deleniti nesciunt earum eaque in commodi eum facilis?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
