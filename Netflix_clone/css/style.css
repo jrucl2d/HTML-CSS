@@ -1,0 +1,146 @@
+:root {
+  --red: rgb(229, 9, 20);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+header {
+  height: 80vh;
+  position: relative;
+  background: url("../img/background.jpg") no-repeat center center / cover;
+  border-bottom: 5px solid rgba(44, 43, 43, 1);
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1px 1px 120px #000;
+}
+.headerUp {
+  position: absolute;
+  display: flex;
+  height: 3.5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.headerUp img {
+  height: 2rem;
+  margin-left: 2rem;
+}
+.headerUp a {
+  background-color: var(--red);
+  font-size: 0.7rem;
+  margin-right: 2rem;
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 3px;
+}
+
+.headerDown {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 3.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.headerDown h1 {
+  max-width: 380px;
+  font-size: 2.6rem;
+  margin: 0 5rem;
+  text-align: center;
+}
+.headerDown h2 {
+  margin: 1rem 0;
+  max-width: 380px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+.headerDown form {
+  display: flex;
+  width: 33rem;
+}
+.headerDown form .email {
+  display: inline-block;
+  position: relative;
+  height: 2.8rem;
+}
+.headerDown form .email input {
+  width: 21rem;
+  height: 100%;
+}
+.headerDown form .email span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.6em;
+  color: #999;
+  font-size: 0.7em;
+  cursor: default;
+}
+.headerDown form button {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--red);
+  border: none;
+  color: white;
+  font-size: 1.1em;
+}
+.headerDown p {
+  margin-top: 0.8em;
+  font-size: 0.8rem;
+}
+
+/* Display section */
+.displays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.displays .displayInfo {
+  display: inline-block;
+  width: 45%;
+}
+.displays .display1 {
+  border: blueviolet 1px solid;
+}
+
+.displayBig {
+  font-size: 2rem;
+}
+.displays img {
+  width: 40%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
