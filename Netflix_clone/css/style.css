@@ -83,11 +83,11 @@ header::before {
 .headerDown form {
   display: flex;
   width: 40rem;
+  height: 3.6rem;
 }
 .headerDown form .email {
   display: inline-block;
   position: relative;
-  height: 3.6rem;
 }
 .headerDown form .email input {
   width: 25rem;
@@ -142,16 +142,20 @@ header::before {
   order: 2;
 }
 .display .displayInfo {
-  width: 39%;
-  margin: 0 5%;
+  width: 30em;
+  margin: 3em;
 }
 
 .displays img {
-  width: 30rem;
-  margin: 0 5%;
+  width: 30em;
 }
 
 /* Accordion Section */
+.accordionSection {
+  padding: 0 15%;
+  padding-bottom: 4rem;
+  border-bottom: 7px solid rgba(44, 43, 43, 1);
+}
 .accordionSection > .fontBig {
   text-align: center;
   margin-top: 1.5em;
@@ -160,38 +164,86 @@ header::before {
 
 .accordion {
   display: flex;
+  max-width: 50rem;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
 }
-input[id*="select"] {
-  display: none;
-}
-input[id*="select"] + label {
+.accordion .title {
   display: block;
   position: relative;
-  width: 50rem;
   padding: 0.8em;
   padding-left: 1.3em;
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 1px;
   background: #303030;
   cursor: pointer;
 }
-input[id*="select"] + label > i {
+.accordion .title > i {
   position: absolute;
   right: 1.2em;
   top: 50%;
   transform: translateY(-50%);
-  /* transition: 0s transform ease; */
-}
-input[id*="select"]:checked + label > i {
-  transform: rotate(45deg) translateY(-50%) translateX(-50%);
 }
 
-/* 나중에 보여야 하는 내용 */
-input[id*="select"] + label + div {
-  height: 0;
+.accordion .content {
+  position: relative;
+  max-height: 0;
+  transition: max-height 0.25s;
   overflow: hidden;
+  background: #303030;
+}
+.accordion .content .contentInsider {
+  position: relative;
+  padding: 1.4em 1.3em;
+}
+/* after click */
+.accordion .clicked i {
+  transform: translateY(-50%) rotateZ(45deg);
+}
+.accordion .clicked + .content {
+  max-height: 1200px;
+  overflow: visible;
+}
+.accordionSection form {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4em;
+  width: 40rem;
+  height: 3.6rem;
+}
+.accordionSection form .email {
+  display: inline-block;
+  position: relative;
+}
+.accordionSection form .email input {
+  width: 25rem;
+  height: 100%;
+}
+.accordionSection form .email span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.6em;
+  color: #999;
+  font-size: 1em;
+  cursor: default;
+}
+.accordionSection form button {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--red);
+  border: none;
+  color: white;
+  font-size: 1.5em;
+}
+.accordionSection p {
+  margin-top: 0.8em;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .fontBig {
