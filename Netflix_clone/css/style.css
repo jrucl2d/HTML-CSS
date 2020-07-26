@@ -18,10 +18,10 @@ body {
 
 /* Header */
 header {
-  height: 80vh;
+  height: 780px;
   position: relative;
   background: url("../img/background.jpg") no-repeat center center / cover;
-  border-bottom: 5px solid rgba(44, 43, 43, 1);
+  border-bottom: 7px solid rgba(44, 43, 43, 1);
 }
 header::before {
   content: "";
@@ -37,20 +37,20 @@ header::before {
 .headerUp {
   position: absolute;
   display: flex;
-  height: 3.5rem;
+  height: 5.3rem;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
 }
 .headerUp img {
-  height: 2rem;
+  height: 3rem;
   margin-left: 2rem;
 }
 .headerUp a {
   background-color: var(--red);
-  font-size: 0.7rem;
-  margin-right: 2rem;
+  font-size: 1rem;
+  margin-right: 3em;
   padding: 0.4em 1em;
   border: none;
   border-radius: 3px;
@@ -60,7 +60,6 @@ header::before {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 3.5rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -69,29 +68,29 @@ header::before {
   z-index: 2;
 }
 .headerDown h1 {
-  max-width: 380px;
-  font-size: 2.6rem;
+  max-width: 450px;
+  font-size: 3rem;
   margin: 0 5rem;
   text-align: center;
 }
 .headerDown h2 {
   margin: 1rem 0;
-  max-width: 380px;
-  font-size: 1rem;
+  max-width: 570px;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
 }
 .headerDown form {
   display: flex;
-  width: 33rem;
+  width: 40rem;
 }
 .headerDown form .email {
   display: inline-block;
   position: relative;
-  height: 2.8rem;
+  height: 3.6rem;
 }
 .headerDown form .email input {
-  width: 21rem;
+  width: 25rem;
   height: 100%;
 }
 .headerDown form .email span {
@@ -101,7 +100,7 @@ header::before {
   transform: translateY(-50%);
   margin-left: 0.6em;
   color: #999;
-  font-size: 0.7em;
+  font-size: 1em;
   cursor: default;
 }
 .headerDown form button {
@@ -111,33 +110,96 @@ header::before {
   background-color: var(--red);
   border: none;
   color: white;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 .headerDown p {
   margin-top: 0.8em;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
-/* Display section */
+/* Display Section */
 .displays {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
 }
-.displays .displayInfo {
-  display: inline-block;
-  width: 45%;
+.display {
+  height: 480px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 7px solid rgba(44, 43, 43, 1);
 }
-.displays .display1 {
-  border: blueviolet 1px solid;
+.display:nth-child(even) {
+  height: 450px;
+}
+.display:nth-child(even) > img {
+  order: 1;
+}
+.display:nth-child(even) > .displayInfo {
+  order: 2;
+}
+.display .displayInfo {
+  width: 39%;
+  margin: 0 5%;
 }
 
-.displayBig {
-  font-size: 2rem;
-}
 .displays img {
-  width: 40%;
+  width: 30rem;
+  margin: 0 5%;
+}
+
+/* Accordion Section */
+.accordionSection > .fontBig {
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[id*="select"] {
+  display: none;
+}
+input[id*="select"] + label {
+  display: block;
+  position: relative;
+  width: 50rem;
+  padding: 0.8em;
+  padding-left: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  background: #303030;
+  cursor: pointer;
+}
+input[id*="select"] + label > i {
+  position: absolute;
+  right: 1.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  /* transition: 0s transform ease; */
+}
+input[id*="select"]:checked + label > i {
+  transform: rotate(45deg) translateY(-50%) translateX(-50%);
+}
+
+/* 나중에 보여야 하는 내용 */
+input[id*="select"] + label + div {
+  height: 0;
+  overflow: hidden;
+}
+
+.fontBig {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.fontSmall {
+  font-size: 1.5rem;
 }
 
 a {
