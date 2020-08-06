@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        /* grid-column-gap: 1em;
+        grid-row-gap: 1em; */
+        grid-gap: 1em;
+      }
+      .wrapper > div {
+        background: #eee;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(odd) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Study</h1>
+
+    <div class="wrapper">
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
+        repudiandae minima aliquid architecto amet veniam maxime iusto dolor
+        provident optio, beatae totam voluptatibus tenetur repellendus
+        consequatur ipsam enim consectetur quaerat nemo voluptatum quibusdam
+        hic! Illum eaque accusantium pariatur, iusto vero perspiciatis ipsa
+        repudiandae, in labore placeat aliquid? Pariatur ducimus praesentium
+        inventore atque labore quas debitis earum eveniet molestias consectetur
+        vero officiis doloremque aperiam adipisci voluptas corporis vel, quis
+        quasi molestiae iusto eius libero. Mollitia magni error neque non
+        voluptatibus fugit!
+      </div>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+        excepturi laboriosam reiciendis dolore repellat facere veniam magnam
+        incidunt eligendi hic quod ea quia exercitationem itaque, doloremque,
+        mollitia voluptates accusamus perferendis!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
+        repudiandae minima aliquid architecto amet veniam maxime iusto dolor
+        provident optio, beatae totam voluptatibus tenetur repellendus
+        consequatur ipsam enim consectetur quaerat nemo voluptatum quibusdam
+        hic! Illum eaque accusantium pariatur, iusto vero perspiciatis ipsa
+        repudiandae, in labore placeat aliquid? Pariatur ducimus praesentium
+        inventore atque labore quas debitis earum eveniet molestias consectetur
+        vero officiis doloremque aperiam adipisci voluptas corporis vel, quis
+        quasi molestiae iusto eius libero. Mollitia magni error neque non
+        voluptatibus fugit!
+      </div>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+        excepturi laboriosam reiciendis dolore repellat facere veniam magnam
+        incidunt eligendi hic quod ea quia exercitationem itaque, doloremque,
+        mollitia voluptates accusamus perferendis!
+      </div>
+    </div>
+  </body>
+</html>
