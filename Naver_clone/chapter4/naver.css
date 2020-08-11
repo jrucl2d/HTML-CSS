@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+.center-align {
+  margin: 0 auto;
+  width: 1080px;
+}
+#header-search h1 {
+  width: 198px;
+  height: 48px;
+  display: inline-block;
+  overflow: hidden;
+  /* background-image: url("./sp_search.png");
+  background-position: -4px -8px;
+  background-repeat: no-repeat; */
+  background: url("./sp_search.png") -4px -8px no-repeat;
+  text-indent: 100%;
+  /* vertical-align은 inline block 이나 inline에만 적용 가능하다 */
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+#header-search a {
+  text-decoration: none;
+}
+#header-search span {
+  display: none;
+}
+#header-search fieldset {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  /*padding-top: 12px;*/
+  /*padding-bottom: 12px;*/
+  /*padding-left: 10px;*/
+  /*padding-right: 0;*/
+  padding: 12px 0 12px 10px;
+  width: 521px;
+  height: 49px;
+  display: inline-block;
+  border: 2px solid #03cf5d; /* hex */
+  vertical-align: middle;
+  /* fieldset을 containing block으로 만들어서 버튼의 absolute 위치의 기준이 되도록 한다. */
+  position: relative;
+  vertical-align: middle;
+}
+#header-search fieldset input {
+  border: none;
+  padding: 0;
+  outline: none; /* input 파란색 아웃라인 없애기 */
+  width: 405px; /* input은 기본적으로 inline-block이다 */
+  height: 23px;
+  vertical-align: top;
+}
+#header-search fieldset button {
+  width: 49px;
+  height: 49px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: #03cf5d;
+  position: absolute;
+  right: -2px; /* border를 고려해서 */
+  top: -2px;
+}
+#header-search fieldset button .search-image {
+  /* span은 기본적으로 inline이기 때문에 너비 높이를 정할 수 없다.  */
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  background-image: url("./sp_search.png");
+  background-repeat: no-repeat;
+  background-position: -3px -60px;
+  margin: 14px;
+}
+
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+
+/* 사실 nth child는 순서에 의존하므로 실무에서는 별로 안 좋다 */
+/* 우선순위를 조작할 때 필요하면 같은 클래스를 여러 번 붙여서 우선순위를 높여줄 수 있다. .abc .abc .abc와 같이 */
+nav li span:first-child {
+  height: 16px;
+  display: inline-block;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+  background-repeat: no-repeat;
+  margin-left: 14px;
+}
+
+nav li:first-child span:first-child {
+  width: 25px;
+  background-position: 0 -285px;
+  margin-left: 0;
+}
+
+nav li:nth-child(2) span:first-child {
+  width: 27px;
+  background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+  width: 40px;
+  background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+  width: 40px;
+  background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+  width: 26px;
+  background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+  width: 25px;
+  background-position: -70px -285px;
+}
+
+#search-ranking {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
