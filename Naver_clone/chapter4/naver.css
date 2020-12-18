@@ -318,7 +318,6 @@ nav ul {
   letter-spacing: -1px;
   font-size: 14px;
 }
-
 main {
   background-color: #f2f4f7;
   display: inline-block;
@@ -358,6 +357,9 @@ main {
   padding: 15px 25px;
 }
 
+#main-login .login-wrapper a {
+  display: block;
+}
 #main-login .login-wrapper a {
   display: block;
 }
